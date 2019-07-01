@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbo_email_demo.iml" filepath="$PROJECT_DIR$/dubbo_email_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/email__user_web/email__user_web.iml" filepath="$PROJECT_DIR$/email__user_web/email__user_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/email_service/email_service.iml" filepath="$PROJECT_DIR$/email_service/email_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entity/entity.iml" filepath="$PROJECT_DIR$/entity/entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_API/service_API.iml" filepath="$PROJECT_DIR$/service_API/service_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user_service/user_service.iml" filepath="$PROJECT_DIR$/user_service/user_service.iml" />
+    </modules>
+  </component>
+</project>

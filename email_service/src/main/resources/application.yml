@@ -1,0 +1,20 @@
+spring:
+  mail:
+    protocol: smtp
+    host: smtp.sina.com
+    username: znznyo@sina.com
+    password: zn.6868688
+  datasource:
+    url: jdbc:mysql:///email
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+dubbo:
+  application:
+    name: email_service
+  registry:
+    address: zookeeper://192.168.75.99:2181
+  protocol:
+    port: -1
+
+

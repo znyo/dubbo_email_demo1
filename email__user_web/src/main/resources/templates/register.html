@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<script src="/js/jquery-1.8.2.js"></script>
+    <title>Title</title>
+</head>
+
+<script type="text/javascript">
+  $(function () {
+
+      $("#emailCheck").blur(function () {
+          if ($(this).val().trim()==null){
+              $("#check2").text("邮箱不能为空")
+          }else {
+              $.ajax({
+                  type:"post",
+                  url:"user/email",
+                  dataType: "text",
+                  contentType: "application/x-www-form-urlencoded;charset=utf-8",
+                  success: function(content){
+                     if(content!=null){
+                         $("#check").text("");
+                         $("#check").text("发送成功");
+                     }else {
+                         $("#check").text("");
+                         $("#check").text("发送失败");
+                     }
+                      }
+              });
+          }
+      })
+      $("#num").blur(function () {
+          $.ajax({
+              type:"post",
+              url:"user/checkNum",
+              dataType: "text",
+              contentType: "application/x-www-form-urlencoded;charset=utf-8",
+              success: function(result){
+                  if(result){
+                      $("#checkNum").text("");
+                      $("#checkNum").text("验证码正确");
+                  }else {
+                      $("#checkNum").text("");
+                      $("#checkNum").text("验证码错误");
+                  }
+              }
+          });
+
+      })
+  })
+</script>
+<body>
+
+   <form action="/user/success" method="post">
+       用户名：<input type="text" name="name" id="username"/><br/>
+       密码：<input type="password" name="password"/><br/>
+       邮箱：<input type="email" name="email" id="emailCheck" /><button type="button" id="check">发送验证码</button><span id="check2"></span><br/>
+       验证码：<input type="text" id="num" name="num" ><span id="checkNum"></span><br/>
+       <input type="submit" value="注册" />
+   </form>
+</body>
+</html>
